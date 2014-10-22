@@ -1,3 +1,6 @@
+[![Melpa Status](http://melpa.milkbox.net/packages/highlight-numbers-badge.svg)](http://melpa.milkbox.net/#/highlight-numbers)
+[![Melpa Stable Status](http://melpa-stable.milkbox.net/packages/highlight-numbers-badge.svg)](http://melpa-stable.milkbox.net/#/highlight-numbers)
+
 # highlight-numbers
 
 `highlight-numbers` is an Emacs minor mode that highlights numeric literals
