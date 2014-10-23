@@ -1,5 +1,5 @@
-[![Melpa Status](http://melpa.milkbox.net/packages/highlight-numbers-badge.svg)](http://melpa.milkbox.net/#/highlight-numbers)
-[![Melpa Stable Status](http://melpa-stable.milkbox.net/packages/highlight-numbers-badge.svg)](http://melpa-stable.milkbox.net/#/highlight-numbers)
+[![Melpa Status](http://melpa.org/packages/highlight-numbers-badge.svg)](http://melpa.org/#/highlight-numbers)
+[![Melpa Stable Status](http://stable.melpa.org/packages/highlight-numbers-badge.svg)](http://stable.melpa.org/#/highlight-numbers)
 
 # highlight-numbers
 
@@ -30,7 +30,7 @@ Regular expressions used to match the numeric literals are stored in
 
 ## Installation
 
-The package is available in [MELPA](http://melpa.milkbox.net/), so if you
+The package is available in [MELPA](http://melpa.org/), so if you
 have MELPA in `package-archives`, all you need is
 
     M-x package-install RET highlight-numbers RET
