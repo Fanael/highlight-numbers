@@ -107,18 +107,28 @@ It is used when no mode-specific one is available.")
                 table)
        (puthash 'emacs-lisp-mode
                 (rx (and
-                     (or (and symbol-start
-                              (opt (any "-+"))
-                              (+ digit)
-                              (opt (or (and (any "eE")
-                                            (opt (any "-+"))
-                                            (+ digit))
-                                       (and "."
-                                            (opt (and (+ digit)
-                                                      (opt (and
-                                                            (any "eE")
-                                                            (opt (any "-+"))
-                                                            (+ digit)))))))))
+                     (or (and
+                          symbol-start
+                          (or
+                           (and
+                            (opt (any "-+"))
+                            (+ digit)
+                            (opt (or (and (any "eE")
+                                          (opt (any "-+"))
+                                          (+ digit))
+                                     (and "."
+                                          (opt (and (+ digit)
+                                                    (opt (and
+                                                          (any "eE")
+                                                          (opt (any "-+"))
+                                                          (+ digit)))))))))
+                           (and
+                            "."
+                            (+ digit)
+                            (opt (and
+                                  (any "eE")
+                                  (opt (any "-+"))
+                                  (+ digit))))))
                          (and "#"
                               symbol-start
                               (or (and (any "bB")
