@@ -70,7 +70,6 @@ It is used when no mode-specific one is available.")
   (copy-hash-table
    (eval-when-compile
      (let ((table (make-hash-table :test 'eq)))
-       (puthash 'fasm-mode 'do-not-use table)
        (puthash 'c-mode
                 (rx (and
                      symbol-start
