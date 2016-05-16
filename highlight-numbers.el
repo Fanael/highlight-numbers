@@ -142,6 +142,13 @@ It is used when no mode-specific one is available.")
                                        (+ hex-digit)))))
                      symbol-end))
                 table)
+       (puthash 'clojure-mode
+                (rx (and symbol-start
+                         (opt "-")
+                         digit
+                         (*? any)
+                         symbol-end))
+                table)
        table)))
   "Hash table storing the mode-specific number highlighting regexps.
 
