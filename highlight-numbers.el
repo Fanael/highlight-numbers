@@ -2,12 +2,12 @@
 
 ;; Author: Fanael Linithien <fanael4@gmail.com>
 ;; URL: https://github.com/Fanael/highlight-numbers
-;; Version: 0.2.1
+;; Version: 0.2.2
 ;; Package-Requires: ((emacs "24") (parent-mode "2.0"))
 
 ;; This file is NOT part of GNU Emacs.
 
-;; Copyright (c) 2013-2014, Fanael Linithien
+;; Copyright (c) 2013-2016, Fanael Linithien
 ;; All rights reserved.
 ;;
 ;; Redistribution and use in source and binary forms, with or without
