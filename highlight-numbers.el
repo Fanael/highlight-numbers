@@ -2,7 +2,7 @@
 
 ;; Author: Fanael Linithien <fanael4@gmail.com>
 ;; URL: https://github.com/Fanael/highlight-numbers
-;; Version: 0.2.2
+;; Version: 0.2.3
 ;; Package-Requires: ((emacs "24") (parent-mode "2.0"))
 
 ;; This file is NOT part of GNU Emacs.
@@ -74,6 +74,7 @@ It is used when no mode-specific one is available.")
                 (rx (and
                      symbol-start
                      (or (and (+ digit)
+                              (? (and "." (* digit)))
                               (? (and (any "eE")
                                       (? (any "-+"))
                                       (+ digit))))
@@ -94,6 +95,7 @@ It is used when no mode-specific one is available.")
                 (rx (and
                      symbol-start
                      (or (and (+ digit)
+                              (? (and "." (* digit)))
                               (? (and (any "eE")
                                       (? (any "-+"))
                                       (+ digit))))
