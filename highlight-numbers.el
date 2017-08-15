@@ -150,6 +150,30 @@ It is used when no mode-specific one is available.")
                          (*? any)
                          symbol-end))
                 table)
+       (puthash 'julia-mode
+                (rx (and
+                     symbol-start
+                     (or (and (+ digit)
+                              (? (and "." (* digit)))
+                              (? (and (any "eE")
+                                      (? (any "-+"))
+                                      (+ digit))))
+                         (and "0"
+                              (any "xX")
+                              (+ hex-digit)))))
+                table)
+       (puthash 'ess-julia-mode
+                (rx (and
+                     symbol-start
+                     (or (and (+ digit)
+                              (? (and "." (* digit)))
+                              (? (and (any "eE")
+                                      (? (any "-+"))
+                                      (+ digit))))
+                         (and "0"
+                              (any "xX")
+                              (+ hex-digit)))))
+                table)
        table)))
   "Hash table storing the mode-specific number highlighting regexps.
 
