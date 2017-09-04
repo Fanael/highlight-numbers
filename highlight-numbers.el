@@ -106,6 +106,45 @@ It is used when no mode-specific one is available.")
                              (* (any "_" "A-Z" "a-z" "0-9"))))
                      symbol-end))
                 table)
+       (puthash 'lisp-mode
+                (rx (and
+                     (or (and
+                          symbol-start
+                          (or
+                           (and
+                            (? (any "-+"))
+                            (+ digit)
+                            (? (or (and (any "eE")
+                                        (? (any "-+"))
+                                        (+ digit))
+                                   (and "."
+                                        (? (and (+ digit)
+                                                (? (and
+                                                    (any "eE")
+                                                    (? (any "-+"))
+                                                    (+ digit))))))
+                                   (and "/"
+                                        (+ digit)))))
+                           (and
+                            "."
+                            (+ digit)
+                            (? (and
+                                (any "eE")
+                                (? (any "-+"))
+                                (+ digit))))))
+                         (and "#"
+                              symbol-start
+                              (or (and (any "bB")
+                                       (? (any "-+"))
+                                       (+ (any "01")))
+                                  (and (any "oO")
+                                       (? (any "-+"))
+                                       (+ (any "0-7")))
+                                  (and (any "xX")
+                                       (? (any "-+"))
+                                       (+ hex-digit)))))
+                     symbol-end))
+                table)
        (puthash 'emacs-lisp-mode
                 (rx (and
                      (or (and
