@@ -145,6 +145,7 @@ It is used when no mode-specific one is available.")
                                        (+ hex-digit)))))
                      symbol-end))
                 table)
+       (puthash 'scheme-mode (gethash 'lisp-mode table) table)
        (puthash 'emacs-lisp-mode
                 (rx (and
                      (or (and
